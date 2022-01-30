@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Merch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- <h1 class="headerTitulo"> Poisonouz </h1>Descarto --> 
+        <img src="../imagenes/poisonouz logo.png" alt="banner" height="10px" class="headerBanner">
+        <nav>
+            <ul class="navPaginas">
+                <li><a href="../index.html">Pagina Principal</a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="info.html">Informacion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form>
+            <fieldset class="fieldsetMerch">
+                <legend class="legendRemeras">Remeras</legend>
+
+                <div>
+                    <input type="email" placeholder="Escriba su Email"/>
+                </div>
+
+                <label for="Talles">Talles:</label>
+                <select name="talles">
+                    <option value="">Elija Talle</option>
+                    <option value="L">Large</option>
+                    <option value="M">Medium</option>
+                    <option value="S">Small</option>
+                </select>
+                
+                <label for="Color">Color:</label>
+                <select name="color">
+                    <option value="">Elija Color</option>
+                    <option value="r">Rojo</option>
+                    <option value="g">Verde</option>
+                    <option value="b">Negro</option>
+                </select>
+
+                <div>
+                    <label for="modelos">Modelos:</label>
+                    <img src="../imagenes/remera-among-us.jpg" alt="remera among" width="95"/>
+                    <img src="../imagenes/8b6a34b6ee992252a33680b1cdf9a0611901b527bd8393d5eb0105258ecb0aa24378.jpeg" alt="remera osos" width="120"/>
+                    <img src="../imagenes/whatsapp-image-2020-04-09-at-19-15-28-11-3d6d090ee71ddfea7d15864706658427-1024-1024.jpeg" alt="remera mariposa" width="120"/>
+                    <select name="modelos">
+                        <option value="">Elija Modelo</option>
+                        <option value="amon">Among Us</option>
+                        <option value="osos">Osos</option>
+                        <option value="mariposa">Mariposa</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset class="fieldsetMerch">
+                <legend>
+                    Skates PROXIMAMENTE!!!
+                </legend>
+            </fieldset>
+            
+            <fieldset class="fieldsetMerch">
+
+                <legend>Entrega</legend>
+                    <div>
+                        <h5>Direccion De Entrega</h5>
+                        <label for="direccionPersonal">Calle</label>
+                        <input type="text" id="direccionPersonal" name="direccionPersonal" placeholder="Ej: Sorceres">
+                        <label for="numeroDireccion">Numero</label>
+                        <input type="text" id="numeroDireccion" name="numeroDireccion" placeholder="Ej: 1944">
+
+                    </div>
+                    <p>El precio de las remeras es de $400
+                    </p>
+                    <p>El envio es efectuado a su direccion y a los 15 dias de su compra</p>
+                    <div>
+                        <input type="checkbox" id="aceptaRemera1" name="aceptaRemera1" value="Acepta">
+                        <label for="aceptaRemera1">Acepta las condiciones de envio y precios</label>
+                    </div>
+
+                <input type="submit">
+            </fieldset>
+        </form>
+    </main>
+
+    <section class="sectionIndex">
+        <ul class="sectionPaginas">
+        
+            <li><a href="https://www.instagram.com/poisonouz.lonewolf" target="_blank"> Instagram </a></li>
+            <li><a href="https://www.soundcloud.com/poisonuosdub" target="_blank"> Soundcloud</a></li>
+            <li><a href="https://open.spotify.com/artist/2m8p35RuiN86w1ZfBXz0le" target="_blank"> Spotify</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p class="textoCopyright">Copyright derechos Poisonouz</p>
+        <img src="../imagenes/poisonouzpnnng.png" alt="logocopy" class="logoCopyright" width="150px">
+    </footer>
+</body>
+</html>
