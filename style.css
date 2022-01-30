@@ -20,6 +20,7 @@ h1{
 
 header{
     background-color: rgba(92, 44, 136, 0.897);
+    background-image: linear-gradient(rgba(92, 44, 136, 0.897),(rgba(255, 0, 0, 0)) );
     position: sticky;
     top: 0;
     display: flex;
@@ -49,6 +50,7 @@ a:focus {
 }
 
 .headerBanner{
+    
     width: 10%;
     height: 5%;
     /* margin: 10px; */
@@ -57,7 +59,7 @@ a:focus {
 }
 
 nav{
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0); */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -71,6 +73,7 @@ nav{
 .navPaginas{
     list-style: none;
     background-color: rgb(0, 0, 0);
+    
     position: absolute;
     top: 0;
     width: 40%;
@@ -132,6 +135,7 @@ nav{
     margin-top: 3%;
     color: rgb(210, 199, 212);
     background-color: rgba(84, 108, 110, 0.568);
+    background-image: linear-gradient(rgba(92, 44, 136, 0.897),(rgba(255, 0, 0, 0)) );
 }
 
 .hNoticias{
@@ -140,6 +144,7 @@ nav{
 }
 
 .flexPaypal{
+    
     grid-row-start:2 ;
     grid-column:1/5;
     display: flex;
@@ -266,7 +271,8 @@ h4{
 
 .divTituloInfo{
     grid-area: TituloInfo;
-    background-color: rgba(80, 39, 119, 0.74);
+    /* background-color: rgba(80, 39, 119, 0.74); */
+    background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
     font-family: 'Oswald', sans-serif;
     font-size: 200%;
     text-align: center;
@@ -376,128 +382,3 @@ span{
     margin-left: 45%;
 }
 
-@media only screen and (max-width: 599px){
-    
-    /* Header, Nav */
-    header{
-        background-color: rgba(92, 44, 136, 0.897);
-        position: sticky;
-        top: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-        height: 100%;
-        
-    }
-    
-    a {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-decoration:none ;
-        color: rgb(202, 181, 212);
-        background-image: linear-gradient(currentColor, currentColor);
-        background-position: 50% 100%;
-        background-repeat: no-repeat;
-        background-size: 0% 2px;
-        transition: background-size .5s;
-    
-    }
-    
-    a:hover,
-    a:focus {
-        background-size: 80% 2px;
-    }
-    
-    .headerBanner{
-        width: 40%;
-        height: 5%;
-        /* margin: 10px; */
-        position: relative;
-        object-fit: cover;
-    }
-    
-    nav{
-        background-color: rgb(0, 0, 0);
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        height: 10%;
-        width: 80%;
-        position: relative;
-        /* margin-top: 0px; */
-    }
-    
-    .navPaginas{
-        list-style: none;
-        background-color: rgb(0, 0, 0);
-        position: absolute;
-        top: 0;
-        width: 20%;
-        margin-top: 0%;
-        margin-right: 18%;
-        padding: 0%;
-        height: 1%;
-        
-    
-    }
-    
-    .navPaginas li{
-        display: inline-block;
-        margin: 2%;
-        
-    }
-    
-    
-    /* Pestaña INFO */
-    .mainInfo{
-        /* background-color: rgba(80, 39, 119, 0.74); */
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 80px auto auto;
-        grid-template-areas: 
-            
-            "TituloInfo"
-            "imgInfo" 
-            "textoInfo"
-            
-        ;
-    }
-
-    .divTituloInfo{
-        grid-area: TituloInfo;
-        background-color: rgba(80, 39, 119, 0.74);
-        font-family: 'Oswald', sans-serif;
-        font-size: 100%;
-        text-align: center;
-        grid-column: 1;
-        grid-row: 1;
-    }
-    
-    .imgInfo{
-        grid-area: imgInfo;
-        grid-column-start: 1;
-        grid-row: 2;
-        width: 100%;
-        height: 75%;
-        /* margin-left: 20%; */
-        margin-top: 0.5%;
-        object-fit: contain ;
-    }
-    
-    .textoInfo{
-        grid-area: textoInfo;
-        grid-column-start: 1;
-        grid-row:3;
-    }
-    
-    .fotoTocandoInfo{
-        width: 360px;
-        height: 360px;
-    }
-    
-    
-    
-    
-}
