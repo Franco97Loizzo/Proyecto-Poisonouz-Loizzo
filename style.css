@@ -108,7 +108,7 @@ nav{
     grid-column: 1/4;
     grid-row: 1/2;
     display: flex;
-    overflow-x: scroll;
+
     width: 75%;
     height: 100%;
     flex-flow: row nowrap;
@@ -153,8 +153,8 @@ nav{
 }
 
 .fotoTocando{
-    width: 75%;
-    height: 700px;
+/*     width: 75%;
+    height: 700px; */
     object-fit: cover;
 /*     margin-left: 420px;
     margin-bottom: 70px; */
