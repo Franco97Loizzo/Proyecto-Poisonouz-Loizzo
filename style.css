@@ -374,6 +374,8 @@ h3{
 
 span{
     font-weight: bold;
+    text-decoration:underline 2px blueviolet;
+    font-size: 105%;
 }
 
 .formularioContacto{
