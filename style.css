@@ -10,6 +10,10 @@ body {
     background-attachment: fixed;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 head{
     position: relative;
 }
@@ -100,7 +104,7 @@ nav{
     grid-template-areas: "flexGaleria , flexNoticias"
     "flexPaypal"
     "flexDivAdicional";
-    gap: 2% 1%;
+    gap: 3% 1%;
     
 }
 
@@ -108,7 +112,7 @@ nav{
     grid-column: 1/4;
     grid-row: 1/2;
     display: flex;
-
+    box-shadow: 10px 10px 5px grey;
     width: 75%;
     height: 100%;
     flex-flow: row nowrap;
@@ -160,20 +164,13 @@ nav{
     margin-bottom: 70px; */
 }
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 
 .videoYoutube{
-    margin-left: 45%;
+    margin-left: 15%;
     margin-bottom: 10%;
-    
-    
-    
 } 
-
-
 
 
 .sectionIndex{
@@ -181,7 +178,6 @@ html{
     background-color: rgba(92, 44, 136, 0.897);
     position: sticky; 
     bottom: 0px; 
-    
 }
 
 .sectionPaginas{
@@ -199,12 +195,22 @@ html{
     
 }
 
+/* ------------------- EVENTOS ------------------- */
+
 .mainEventos{
     display: flex;
     flex-direction: row;
     justify-content:start;
     flex-wrap: wrap;
 }
+
+.tablaEventos{
+    background-color: rgba(171, 122, 216, 0.822);
+    margin-left: 75%;
+    margin-bottom: 10% ;
+}
+
+/* ------------------------- MERCH ------------------------ */
 
 .fieldsetMerch{
     background-color: rgba(80, 39, 119, 0.74);
@@ -215,20 +221,7 @@ html{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly; */
-
     margin: 2%;
-}
-
-h3{
-    /* background-color: rgba(80, 39, 119, 0.74); */
-    font-family: 'Oswald', sans-serif;
-    font-style: normal;
-    font-size: 150%;
-    text-align: center;
-    margin: 1%;
-    border: 2%;
-    line-height: 15px;
-    padding: 0.5%
 }
 
 h4{
@@ -240,13 +233,7 @@ h4{
     padding: 0.1%
 }
 
-.tablaEventos{
-    background-color: rgba(171, 122, 216, 0.822);
-    margin-left: 75%;
-    margin-bottom: 10% ;
-}
-
-/* PESTAÑA INFORMACION */
+/* ----------------------------- INFORMACION --------------------- */
 
 .mainInfo{
     /* background-color: rgba(80, 39, 119, 0.74); */
@@ -262,7 +249,7 @@ h4{
 
 .divTituloInfo{
     grid-area: TituloInfo;
-    /* background-color: rgba(80, 39, 119, 0.74); */
+    color: rgb(255, 255, 255);
     background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
     font-family: 'Oswald', sans-serif;
     font-size: 200%;
@@ -292,14 +279,15 @@ h4{
 }
 
 .fotoTocandoInfo{
-    width: 900px;
-    height: 900px;
+    margin-left: 15%;
+    width: 600px;
+    height: 600px;
 }
 
 .fotoTocandoInfo:hover{
     filter:invert(15%);
-    width: 1080px;
-    height: 1080px;
+    width: 720px;
+    height: 720px;
     z-index: 5;
 
 }
@@ -317,7 +305,6 @@ h2{
 }
 
 .textoInfo{
-    /* background-color: rgba(80, 39, 119, 0.671); */
     background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
     color: rgb(180, 178, 32);
     font-family: 'Oswald', sans-serif;
@@ -328,27 +315,36 @@ h2{
     justify-content: space-between;
     line-height: 30px;
     margin: 15%;
-    border: 5%;
-    /* padding: 0.1%; */
-
+    margin-right: 25%;
 }
 
-/* p{
-    line-height: 30px;
-} */
+/* --------------------- CONTACTO ----------------- */
 
 .mainContacto{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 2%;
+    color: white;
 }
 
 .textoUnoContacto{
     font-family: 'Oswald', sans-serif;
     font-size: 120%;
     text-align: start;
-    
+    color: white;
+}
+
+h3{
+    color: white;
+    background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-size: 150%;
+    text-align: center;
+    line-height: 15px;
+    padding: 0.5%
 }
 
 span{
@@ -356,9 +352,11 @@ span{
 }
 
 .formularioContacto{
-    background-image: linear-gradient(rgb(66, 13, 66), rgba(0, 0, 0, 0.452));
+    background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
     font-family: sans-serif;
 }
+
+/* -------------------- FOOTER ----------------- */
 
 .textoCopyright{
     font-family: 'Oswald', sans-serif;
