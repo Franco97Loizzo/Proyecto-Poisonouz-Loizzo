@@ -200,16 +200,41 @@ nav{
 .mainEventos{
     display: flex;
     flex-direction: row;
-    justify-content:start;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.sectionEventos{
+    background-color: rgba(171, 122, 216, 0.822);
+    margin-right: 750px;
+    margin-bottom: 100px;
+    border: 150px black;
 }
 
 .tablaEventos{
-    background-color: rgba(171, 122, 216, 0.822);
-    margin-left: 75%;
-    margin-bottom: 10% ;
+    box-shadow: 4px 4px 8px #000000;
 }
 
+.textEventos{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-size: 120%;
+    text-align: center;
+    line-height: 15px;
+    padding: 1%;
+}
+
+h6{
+    color: rgb(255, 255, 255);
+    background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 120%;
+    text-align: center;
+}
 /* ------------------------- MERCH ------------------------ */
 
 .fieldsetMerch{
@@ -332,7 +357,7 @@ h2{
     font-family: 'Oswald', sans-serif;
     font-size: 120%;
     text-align: start;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 h3{
