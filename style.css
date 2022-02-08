@@ -378,6 +378,17 @@ span{
     margin-left: 45%;
 }
 
+
+
+
+
+/* ------------------------------------ MEDIA QUERIES -----------------------------*/
+
+
+
+
+
+
 @media only screen and (max-width: 599px){
     /* ------------------------ Header Nav ------------------- */
 
@@ -386,18 +397,20 @@ span{
         position: relative;
         z-index: 2;
         display: grid;
-        grid-template-rows: 150px 75px ;
+        grid-template-rows: 1fr 1fr ;
         row-gap: 3px;
+        width: 100%;
     }
 
     .headerBanner{
         height: 150px;
-        width: 450px;
+        width: 100%;
         position: relative;
         object-fit: fill;
+        
     }
-
-    .nav{
+    .nav,
+    .navbar{
         width: 100%;
     }
 
@@ -405,7 +418,7 @@ span{
 
     .gridMainPadre{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: "flexGaleria"
         "flexNoticias"
@@ -418,16 +431,16 @@ span{
     .flexGaleria{
         grid-row: 1;
         grid-column: 1;
-        width: 599px;
+        width: 100%;
         object-fit: fill;
         margin-top: 2%;
-        margin-left: 0;
+        margin-left: 7px;
     }
     
     .flexNoticias{
         grid-row-start: 2;
         grid-column-start: 1;
-        width: 599px;
+        width: 100%;
         color: rgb(210, 199, 212);
         background-color: rgba(84, 108, 110, 0.568);
     }
@@ -439,13 +452,13 @@ span{
         flex-flow: row wrap;
         justify-content: space-evenly;
         align-items: center;
-        width: 599px;
+        width: 100%;
         background-color: rgba(84, 108, 110, 0.568);
     }
     
     .flexDivAdicional{
         grid-row-start:4;
-        width: 599px;
+        width: 100%;
         background-color: #000000;
     }
     
@@ -459,13 +472,14 @@ span{
         background-color: #000000;
         width: 100%;
         height: 100%;
-        margin-left: 0;
+        margin-left: 10px;
     } 
 
     /*-------------------------- REDES -----------------------*/
 
     .sectionIndex{
         height: 5%;
+        width: 100%;
         background-color: rgba(92, 44, 136, 0.897);
         position: sticky; 
         bottom: 0px; 
@@ -473,19 +487,15 @@ span{
 
     }
     
-    .fa,{
-        
-        font-weight: 10px; }
-
+    .fa{
+        font-weight: 10px;
+    }
     .sectionPaginas{
         list-style: none;
-        display: flex;
+        width: auto;
+/*         display: flex;
         flex: row wrap;
-        justify-content: flex-start;
-    }
-    
-    .sectionPaginas li{
-        
+        justify-content: flex-start; */
     }
     /* ----------------------- EVENTOS --------------------------*/
 
@@ -582,5 +592,215 @@ span{
         justify-content: space-between; */
         line-height: 30px;
     }
+}
 
+@media only screen and (max-width: 999px){
+    /* ------------------------ Header Nav ------------------- */
+
+    header{
+        background-color: rgba(92, 44, 136, 0.897);
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-rows: 1fr 85px ;
+        row-gap: 3px;
+        width: 100%;
+    }
+
+    .headerBanner{
+        height: 120px;
+        width: 100%;
+        position: relative;
+        object-fit: fill;
+        
+    }
+    .nav,
+    .navbar{
+        width: 100%;
+    }
+
+    /* ------------------------- CUERPO INDEX ----------------- */
+
+    .gridMainPadre{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "flexGaleria"
+        "flexNoticias"
+        "flexPaypal"
+        "flexDivAdicional"
+        "sectionIndex";
+        gap: 0.5% 1%;
+        
+    }
+
+    .flexGaleria{
+        grid-row: 1;
+        grid-column: 1;
+        width: 90%;
+        object-fit: fill;
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+    
+    .flexNoticias{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: 80%;
+        height: 25%;
+        margin-left: 10%;
+        margin-top: 0;
+        color: rgb(210, 199, 212);
+        background-color: rgba(46, 60, 61, 0.884);
+    }
+
+    .flexPaypal{
+        grid-row-start:3 ;
+        grid-column-start: 1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 15%;
+        background-color: rgba(49, 60, 61, 0.74);
+    }
+    
+    .flexDivAdicional{
+        grid-row-start:4;
+        width: 90%;
+        margin-left: 3%;
+        background-color: #000000;
+    }
+    
+    .fotoTocando{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .videoYoutube{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    } 
+
+    /*-------------------------- REDES -----------------------*/
+
+    .sectionIndex{
+        height: 5%;
+        width: 100%;
+        background-color: rgba(92, 44, 136, 0.897);
+        position: sticky; 
+        bottom: 0px; 
+        z-index: 2;
+
+    }
+    
+    .fa{
+        font-weight: 10px;
+    }
+    .sectionPaginas{
+        list-style: none;
+        width: auto;
+/*         display: flex;
+        flex: row wrap;
+        justify-content: flex-start; */
+    }
+
+    /* ----------------------- EVENTOS --------------------------*/
+
+    .mainEventos{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    
+    .sectionEventos{
+        background-color: rgba(171, 122, 216, 0.822);
+        margin-bottom: 100px;
+        margin-left: 175px;
+        padding: 0.1%;
+        box-shadow: 4px 4px 8px #000000;
+    }
+    
+    .textEventos{
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
+        font-size: 150%;
+        text-align: center;
+        line-height: 15px;
+    }
+    
+    h6{
+        color: rgb(255, 255, 255);
+        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
+        text-shadow: 2px 2px 4px #000000;
+        font-family: 'Oswald', sans-serif;
+        font-size: 200%;
+        text-align: center;
+    }
+
+    /* ----------------------- MERCH --------------------------*/
+
+    /* ----------------------- CONTACTO --------------------------*/
+
+    /* ----------------------- INFORMACION --------------------------*/
+
+    .mainInfo{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 80px 1fr 1fr;
+        grid-template-areas: 
+            
+            "TituloInfo" "imgInfo" "textoInfo"
+            
+        ;
+    }
+    
+    .divTituloInfo{
+        grid-area: TituloInfo;
+        color: rgb(255, 255, 255);
+        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
+        font-family: 'Oswald', sans-serif;
+        font-size: 300%;
+        text-align: center;
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    
+    .imgInfo{
+        grid-area: imgInfo;
+        grid-column-start: 1;
+        grid-row-start: 2;
+        width: 400px;
+        height: 600px;
+        margin-top: 0.5%;
+        margin-left: -61px;
+        object-fit: fill ;
+    }
+    
+    .textoInfo{
+        grid-area: textoInfo;
+        grid-column-start: 1;
+        grid-row-start: 3;
+    }
+    
+    .textoInfo{
+        background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
+        color: rgb(180, 178, 32);
+        font-family: 'Oswald', sans-serif;
+        font-size: 200%;
+        text-align: justify;
+        margin: 20px 0 20px 0; 
+        width: 100%;
+/*         display: flex;
+        flex-direction: column;
+        justify-content: space-between; */
+        line-height: 30px;
+    }
 }
