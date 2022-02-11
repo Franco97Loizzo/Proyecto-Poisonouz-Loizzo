@@ -49,11 +49,9 @@ fixed;
     grid-template-rows: $row;
 }
 
-@mixin gridHijo ($coluStart, $coluEnd, $filaStart, $filaEnd){
-    grid-column-start: $coluStart;
-    grid-column-end: $coluEnd ;
-    grid-row-start: $filaStart;
-    grid-row-end: $filaEnd;
+@mixin gridHijo ($colu, $fila){
+    grid-column-start: $colu;
+    grid-row-start: $fila;
 }
 
 
