@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 16px;
+  z-index: 1;
+  background-image: url(../../imagenes/retro4202.png);
+  background-size: cover;
+  background-size: 100%;
+  background-attachment: fixed; }
+
+head {
+  position: relative; }
+
+header {
+  background-color: rgba(92, 44, 136, 0.897);
+  background-color: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  z-index: 2; }
+
+h2 {
+  background-color: rgba(92, 44, 136, 0.897);
+  font-family: "Oswald";
+  font-size: 350%;
+  color: white;
+  text-align: center;
+  line-height: 15px; }
+
+/* --- aun tengo problemas con los Anchor ---*/
+a {
+  font-family: "Open Sans";
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .5s; }
+  a _:hover,
+  a _:focus {
+    background-size: 80% 2px; }
+
+.headerBanner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  position: relative; }
+
+nav {
+  width: 80%;
+  height: 10%;
+  position: relative; }
+
+.navPaginas {
+  width: 40%;
+  height: 10%;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  margin-top: 0%;
+  margin-right: 18%;
+  padding: 0%; }
+  .navPaginas li {
+    display: inline-block;
+    margin: 2%; }
+
+.gridMainPadre {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
+  grid-template-areas: "flexGaleria , flexNoticias" "flexPaypal" "flexDivAdicional";
+  gap: 3% 1%; }
+
+.flexGaleria {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
+  height: 100%;
+  align-items: flex-start;
+  object-fit: cover;
+  margin-top: 2%;
+  margin-left: 3%; }
+
+.flexNoticias {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin-top: 100px;
+  color: #d2c7d4;
+  background-color: rgba(84, 108, 110, 0.568); }
+
+.textoNoticias {
+  font-family: "Roboto";
+  color: #b4b220; }
+
+.flexPaypal {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(84, 108, 110, 0.568); }
+
+.flexDivAdicional {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.fotoTocando {
+  object-fit: cover; }
+
+.videoYoutube {
+  margin-left: 45px;
+  margin-bottom: 10px; }
+
+html {
+  scroll-behavior: smooth; }
+
+/* --------------------- redes ------------------*/
+.sectionIndex {
+  height: 5%;
+  background-color: rgba(92, 44, 136, 0.897);
+  position: sticky;
+  bottom: 0px; }
+
+.sectionPaginas {
+  list-style: none;
+  width: 15%;
+  margin: auto;
+  padding: 0.1%; }
+
+.sectionPaginas li {
+  display: inline-block;
+  margin: 1%; }
+
+.mainContacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2%;
+  color: white; }
+
+.textoContacto {
+  font-family: "Roboto";
+  font-size: 120%;
+  color: white;
+  text-align: start;
+  line-height: 15px; }
+
+h3 {
+  background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  font-size: 150%;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  padding: 0.5%;
+  font-family: "Oswald";
+  text-shadow: 2px 2px 4px #000000; }
+
+span {
+  font-weight: bold;
+  text-decoration: underline 2px blueviolet;
+  font-size: 105%; }
+
+.formularioContacto {
+  background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0)); }
+
+.textoCopyright {
+  font-family: "Oswald";
+  font-size: 150%;
+  color: white;
+  text-align: start;
+  line-height: 15px;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.logoCopyright {
+  margin-left: 45%; }

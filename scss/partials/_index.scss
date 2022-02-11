@@ -1,0 +1,141 @@
+body{
+    @extend %resetCss;
+}
+
+head{
+    position: relative;
+}
+
+header{
+    background-color: map-get($colores, primario );
+    background-color: map-get($gradiantes, gradiantePrima );
+    position: sticky;
+    top: 0;
+    @include flexBox (row, wrap, space-around);
+    @include anchoAlto (100%, 100%);
+    z-index: 2;
+}
+
+h2{
+    background-color: map-get($colores, primario );
+    font-family: map-get($letras, titulos );
+    @include desingText (350%, white, center, 15px);
+}
+
+/* --- aun tengo problemas con los Anchor ---*/
+a{
+    font-family: map-get($letras, anchor);
+    text-decoration: none;
+    color: map-get($colores, aColor );
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .5s;
+        _:hover,
+        _:focus{
+            background-size: 80% 2px;
+        }
+}
+
+.headerBanner{
+    @include flexBox (row, wrap, flex-start);
+    @include anchoAlto (20%, auto);
+    object-fit: cover;
+    position: nth($position, 1);
+}
+
+nav{
+    @include anchoAlto (80%, 10%);
+    position: nth($position, 1);
+}
+
+.navPaginas{
+    @include anchoAlto (40%, 10%);
+    list-style: none;
+    position: nth($position , 2 );
+    top: 0;
+    margin-top: 0%;
+    margin-right: 18%;
+    padding: 0%;
+    li{
+        display: inline-block;
+        margin: 2%;
+    }
+}
+
+
+
+.gridMainPadre{
+    @include gridPadre (1fr 1fr 1fr, 1fr 0.5fr 1fr);
+    grid-template-areas: "flexGaleria , flexNoticias"
+    "flexPaypal"
+    "flexDivAdicional";
+    gap: 3% 1%;
+    
+}
+
+.flexGaleria{
+    @include gridHijo (1, 3, 1, 2);
+    @include flexBox (row, wrap, space-between);
+    @include anchoAlto (75%, 100%);
+    align-items:flex-start ;
+    object-fit: cover;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.flexNoticias{
+    @include gridHijo (1, 3, 1, 1);
+    margin-top: 100px;
+    color: rgb(210, 199, 212);
+    background-color: map-get($colores, bgprimario );
+}
+.textoNoticias{
+    font-family: map-get($letras, textFont);
+    color: map-get($colores, textColor);
+}
+.flexPaypal{
+    @include gridHijo (1, 2, 1 , 1);
+    @include flexBox (row, wrap, space-evenly);
+    align-items: center;
+    background-color: map-get($colores, bgprimario );
+}
+
+.flexDivAdicional{
+    @include gridHijo (1, 3 , 1 ,2);
+}
+
+.fotoTocando{
+    object-fit: cover;
+}
+
+.videoYoutube{
+    margin-left: 45px;
+    margin-bottom: 10px;
+} 
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* --------------------- redes ------------------*/
+
+.sectionIndex{
+    height: 5%;
+    background-color: rgba(92, 44, 136, 0.897);
+    position: sticky; 
+    bottom: 0px; 
+}
+
+.sectionPaginas{
+    list-style: none;
+    width: 15%;
+    margin: auto;
+    padding: 0.1%;
+}
+
+.sectionPaginas li{
+    display: inline-block;
+    margin: 1%;
+}

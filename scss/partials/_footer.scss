@@ -1,0 +1,10 @@
+.textoCopyright{
+    font-family:map-get($letras, titulos);
+    @include desingText (150%, white, start, 15px);
+    background-color: map-get($colores, secundario);
+    @include flexBox (row, wrap, center);
+}
+
+.logoCopyright{
+    margin-left: 45%;
+}

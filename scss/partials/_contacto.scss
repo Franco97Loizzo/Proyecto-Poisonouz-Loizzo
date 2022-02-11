@@ -1,0 +1,29 @@
+.mainContacto{
+    @include flexBox(row, wrap, space-around);
+    margin: 2%;
+    color: map-get($colores, aColor );
+}
+
+.textoContacto{
+    font-family: map-get($letras, textFont );
+    @include desingText (120%, white, start, 15px)
+}
+
+h3{
+    background: map-get($gradiantes, gradiantePrima );
+    @include desingText (150%, white, center, 15px);
+    padding: 0.5%;
+    font-family: map-get($letras, titulos );
+    text-shadow: 2px 2px 4px #000000;
+}
+
+span{
+    font-weight: bold;
+    text-decoration:underline 2px blueviolet;
+    font-size: 105%;
+}
+
+.formularioContacto{
+    font-family: map-get($letras, Roboto) ;
+    background-image: map-get($gradiantes, gradiantePrima );
+}

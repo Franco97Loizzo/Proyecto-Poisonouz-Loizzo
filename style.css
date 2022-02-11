@@ -36,6 +36,8 @@ header{
     z-index: 2;
 }
 
+/* correjir en SASS */
+
 a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
