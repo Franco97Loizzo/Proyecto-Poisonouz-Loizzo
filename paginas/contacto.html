@@ -60,28 +60,25 @@
         <section class="formularioContacto">
             <form>
                 <fieldset>
-                <legend>Formulario de contacto</legend>
-                <div>
-                    <label for="nombreContacto">Nombre</label>
-                    <input type="text" id="nombreContacto" name="nombreContacto">
-
-                    <label for="apellidoContacto">Apellido</label>
-                    <input type="text" id="apellidoContacto" name="apellidoContacto">
+                <h3>Formulario de Contacto</h3>
+                <div class="mb-3">
+                    <label for="nombreContacto" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombreContacto" placeholder="Introduzca su nombre">
+                    <label for="apellidoContacto" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellidoContacto" placeholder="Introduzca su apellido">
                 </div>
-                <div>
+                <div class="mb-3">
                     <label for="mailContacto">Email</label>
-                    <input type="email" id="emailContato" name="emailContato">
+                    <input type="email" class="form-control" id="emailContato" placeholder="example@mail.com" name="emailContato">
                     <label for="numeroContacto">Numero de Telefono</label>
-                    <input type="text" id="numeroContacto" name="numeroContacto">
+                    <input type="text" class="form-control" id="numeroContacto" placeholder="11223345" name="numeroContacto">
                 </div>
                 <div>
                     <input type="checkbox" id="infoAdcicional" name="aceptaInformacionadicional" value="acepta">
                     <label for="aceptaInformacionadicional">Acepta que enviemos mails con informacion semanal adicional?</label>
                 </div>
-                <div>
-                    <input type="submit">
-                </div>
-            </fieldset>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                </fieldset>
             </form>
         </section>
     </main>

@@ -1,0 +1,19 @@
+/* ------------------ MERCH ---------------------*/
+.fieldsetMerch{
+    background-image: map-get($gradiantes, gradiantePrima );
+    @include desingText (120%, rgb(255, 255, 255), start, 15px);
+    font-family: map-get($letras, textFont);
+    margin: 2%;
+}
+
+h4{
+    background: map-get($gradiantes, gradiantePrima );
+    @include desingText (120%, white, center, 15px);
+    padding: 0.5%;
+    font-family: map-get($letras, titulos );
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.gridMerch{
+    @include flexBox (row, wrap, space-around)
+}

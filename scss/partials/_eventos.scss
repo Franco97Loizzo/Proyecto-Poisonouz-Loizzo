@@ -1,0 +1,26 @@
+/*--------------------------- EVENTOS ---------------------*/
+
+.mainEventos{
+    @include flexBox (row, wrap, space-around);
+    margin-top: 50px;
+}
+
+.sectionEventos{
+    background-image: map-get($gradiantes, gradiantePrima);
+    @include desingText (100%, white, center, 25px);
+    font-family: map-get($letras, textFont );
+    margin-right: 750px;
+    margin-bottom: 100px;
+    border: 150px black;
+}
+
+.tablaEventos{
+    box-shadow: 4px 4px 8px #000000;
+}
+
+.textEventos{
+    font-family: map-get($letras, textFont );
+    @include desingText (120%, rgb(243, 243, 243), center, 15px);
+    text-shadow: 2px 2px 4px #000000;
+    padding: 1%;
+}

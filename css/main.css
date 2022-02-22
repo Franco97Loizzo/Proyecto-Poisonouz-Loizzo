@@ -4,7 +4,6 @@ body {
   border: 0;
   font-size: 16px;
   z-index: 1;
-  background-color: black;
   background-image: url(../../imagenes/retro4202.png);
   background-size: cover;
   background-size: 100%;
@@ -15,7 +14,6 @@ head {
 
 header {
   background-color: rgba(92, 44, 136, 0.897);
-  background-color: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
   position: sticky;
   top: 0;
   display: flex;
@@ -44,9 +42,10 @@ a {
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size .5s; }
-  a _:hover,
-  a _:focus {
-    background-size: 80% 2px; }
+
+a:hover,
+a:focus {
+  background-size: 80% 2px; }
 
 .headerBanner {
   display: flex;
@@ -55,7 +54,7 @@ a {
   justify-content: flex-start;
   width: 20%;
   height: auto;
-  object-fit: cover;
+  /* object-fit: cover; */
   position: relative; }
 
 nav {
@@ -80,9 +79,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 0.5fr 1fr;
-  grid-template-areas: "flexGaleria , flexNoticias"
- "flexPaypal"
- "flexDivAdicional";
+  grid-template-areas: "flexGaleria , flexNoticias" "flexPaypal" "flexDivAdicional";
   gap: 3% 1%; }
 
 .flexGaleria {
@@ -182,6 +179,109 @@ span {
 
 .formularioContacto {
   background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0)); }
+
+/* ------------------ MERCH ---------------------*/
+.fieldsetMerch {
+  background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  font-size: 120%;
+  color: white;
+  text-align: start;
+  line-height: 15px;
+  font-family: "Roboto";
+  margin: 2%; }
+
+h4 {
+  background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  font-size: 120%;
+  color: white;
+  text-align: center;
+  line-height: 15px;
+  padding: 0.5%;
+  font-family: "Oswald";
+  text-shadow: 2px 2px 4px #000000; }
+
+.gridMerch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+/*--------------------------------- INFORMACION -----------------------------*/
+.mainInfo {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 1fr;
+  gap: 150px; }
+
+.imgInfo {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  width: 100%;
+  height: 75%;
+  margin-left: 5%;
+  margin-top: 0.5%;
+  object-fit: contain; }
+
+.textoInfo {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  font-family: "Roboto";
+  font-size: 150%;
+  color: #b4b220;
+  text-align: justify;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10%;
+  margin-right: 15%; }
+
+.textoInfo:hover {
+  cursor: default; }
+
+.fotoTocandoInfo {
+  margin-left: 15%;
+  width: 600px;
+  height: 600px; }
+
+.fotoTocandoInfo:hover {
+  filter: invert(15%);
+  width: 720px;
+  height: 720px;
+  z-index: 5; }
+
+/*--------------------------- EVENTOS ---------------------*/
+.mainEventos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px; }
+
+.sectionEventos {
+  background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+  font-size: 100%;
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  font-family: "Roboto";
+  margin-right: 750px;
+  margin-bottom: 100px;
+  border: 150px black; }
+
+.tablaEventos {
+  box-shadow: 4px 4px 8px #000000; }
+
+.textEventos {
+  font-family: "Roboto";
+  font-size: 120%;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 15px;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 1%; }
 
 .textoCopyright {
   font-family: "Oswald";

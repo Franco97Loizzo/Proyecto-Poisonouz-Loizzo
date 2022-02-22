@@ -1,0 +1,42 @@
+/*--------------------------------- INFORMACION -----------------------------*/
+
+.mainInfo{
+    @include gridPadre (2fr, 1fr);
+    gap: 150px;
+}
+
+.imgInfo{
+    @include gridHijo (1,1);
+    @include anchoAlto (100%, 75%);
+    margin-left: 5%;
+    margin-top: 0.5%;
+    object-fit: contain ;
+}
+
+.textoInfo{
+    @include gridHijo (2,1);
+    background-image:map-get($gradiantes, gradiantePrima ) ;
+    font-family: map-get($letras, textFont );
+    @include desingText (150%, rgb(180, 178, 32), justify, 30px);
+    @include flexBox (column, wrap, space-between);
+    margin: 10%;
+    margin-right: 15%;
+}
+
+.textoInfo:hover{
+    cursor: default;
+}
+
+.fotoTocandoInfo{
+    margin-left: 15%;
+    width: 600px;
+    height: 600px;
+}
+
+.fotoTocandoInfo:hover{
+    filter:invert(15%);
+    width: 720px;
+    height: 720px;
+    z-index: 5;
+
+}

@@ -7,8 +7,7 @@ head{
 }
 
 header{
-    /* background-color: map-get($colores, primario ); */
-    background-color: map-get($gradiantes, gradiantePrima );
+    background-color: map-get($colores, primario );
     position: sticky;
     top: 0;
     @include flexBox (row, wrap, space-around);
@@ -32,16 +31,17 @@ a{
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .5s;
-        _:hover,
-        _:focus{
-            background-size: 80% 2px;
-        }
+}
+
+a:hover,
+a:focus {
+    background-size: 80% 2px;
 }
 
 .headerBanner{
     @include flexBox (row, wrap, flex-start);
     @include anchoAlto (20%, auto);
-    object-fit: cover;
+    /* object-fit: cover; */
     position: nth($position, 1);
 }
 
