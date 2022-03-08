@@ -8,7 +8,7 @@
 .imgInfo{
     @include gridHijo (1,1);
     @include anchoAlto (100%, 75%);
-    margin-left: 5%;
+    margin-left: 0 auto;
     margin-top: 0.5%;
     object-fit: contain ;
 }
@@ -17,7 +17,7 @@
     @include gridHijo (2,1);
     background-image:map-get($gradiantes, gradiantePrima ) ;
     font-family: map-get($letras, textFont );
-    @include desingText (150%, rgb(180, 178, 32), justify, 30px);
+    @include desingText (150%, rgb(255, 255, 255), justify, 30px);
     @include flexBox (column, wrap, space-between);
     margin: 10%;
     margin-right: 15%;
@@ -35,8 +35,8 @@
 
 .fotoTocandoInfo:hover{
     filter:invert(15%);
-    width: 720px;
-    height: 720px;
+    width: 620px;
+    height: 620px;
     z-index: 5;
 
 }

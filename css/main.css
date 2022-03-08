@@ -134,7 +134,7 @@ html {
 .sectionIndex {
   height: 5%;
   background-color: rgba(92, 44, 136, 0.897);
-  position: sticky;
+  position: relative;
   bottom: 0px; }
 
 .sectionPaginas {
@@ -218,7 +218,7 @@ h4 {
   grid-row-start: 1;
   width: 100%;
   height: 75%;
-  margin-left: 5%;
+  margin-left: 0 auto;
   margin-top: 0.5%;
   object-fit: contain; }
 
@@ -228,7 +228,7 @@ h4 {
   background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
   font-family: "Roboto";
   font-size: 150%;
-  color: #b4b220;
+  color: white;
   text-align: justify;
   line-height: 30px;
   display: flex;
@@ -248,8 +248,8 @@ h4 {
 
 .fotoTocandoInfo:hover {
   filter: invert(15%);
-  width: 720px;
-  height: 720px;
+  width: 620px;
+  height: 620px;
   z-index: 5; }
 
 /*--------------------------- EVENTOS ---------------------*/
@@ -348,17 +348,14 @@ h4 {
     height: 5%;
     width: 100%;
     background-color: rgba(92, 44, 136, 0.897);
-    position: sticky;
+    position: relative;
     bottom: 0px;
     z-index: 2; }
   .fa {
     font-weight: 10px; }
   .sectionPaginas {
     list-style: none;
-    width: auto;
-    /*         display: flex;
-        flex: row wrap;
-        justify-content: flex-start; */ }
+    width: auto; }
   /* ----------------------- EVENTOS --------------------------*/
   .mainEventos {
     display: flex;
@@ -388,12 +385,35 @@ h4 {
     font-size: 200%;
     text-align: center; }
   /* ----------------------- MERCH --------------------------*/
+  .fieldsetMerch {
+    background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+    font-size: 120%;
+    color: white;
+    text-align: start;
+    line-height: 15px;
+    font-family: "Roboto";
+    width: 100%;
+    margin: 2%; }
+  h4 {
+    background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+    font-size: 120%;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    padding: 0.5%;
+    font-family: "Oswald";
+    text-shadow: 2px 2px 4px #000000; }
+  .gridMerch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
   /* ----------------------- CONTACTO --------------------------*/
   /* ----------------------- INFORMACION --------------------------*/
   .mainInfo {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 80px 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: "TituloInfo" "imgInfo" "textoInfo"; }
   .divTituloInfo {
     grid-area: TituloInfo;
@@ -408,11 +428,18 @@ h4 {
     grid-area: imgInfo;
     grid-column-start: 1;
     grid-row-start: 2;
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5%;
+    object-fit: fill; }
+  .fotoTocandoInfo {
+    width: 100%;
+    margin: 0 auto; }
+  .fotoTocandoInfo:hover {
+    filter: invert(15%);
     width: 400px;
     height: 600px;
-    margin-top: 0.5%;
-    margin-left: -61px;
-    object-fit: fill; }
+    z-index: 5; }
   .textoInfo {
     grid-area: textoInfo;
     grid-column-start: 1;
@@ -539,6 +566,29 @@ h4 {
     font-size: 200%;
     text-align: center; }
   /* ----------------------- MERCH --------------------------*/
+  .fieldsetMerch {
+    background-image: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+    font-size: 120%;
+    color: white;
+    text-align: start;
+    line-height: 15px;
+    font-family: "Roboto";
+    width: 100%;
+    margin: 2%; }
+  h4 {
+    background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(255, 0, 0, 0));
+    font-size: 120%;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    padding: 0.5%;
+    font-family: "Oswald";
+    text-shadow: 2px 2px 4px #000000; }
+  .gridMerch {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
   /* ----------------------- CONTACTO --------------------------*/
   /* ----------------------- INFORMACION --------------------------*/
   .mainInfo {
@@ -559,11 +609,15 @@ h4 {
     grid-area: imgInfo;
     grid-column-start: 1;
     grid-row-start: 2;
-    width: 400px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     margin-top: 0.5%;
-    margin-left: -61px;
+    /* margin-left: 15%; */
     object-fit: fill; }
+  .fotoTocandoInfo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; }
   .textoInfo {
     grid-area: textoInfo;
     grid-column-start: 1;
@@ -576,9 +630,6 @@ h4 {
     text-align: justify;
     margin: 20px 0 20px 0;
     width: 100%;
-    /*         display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
     line-height: 30px; } }
 
 .textoCopyright {
