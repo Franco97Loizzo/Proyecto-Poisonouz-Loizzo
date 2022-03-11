@@ -1,3 +1,5 @@
+/* --------- CONTACTO ----------- */
+
 .mainContacto{
     @include flexBox(row, wrap, space-around);
     margin: 2%;
@@ -24,6 +26,6 @@ span{
 }
 
 .formularioContacto{
-    font-family: map-get($letras, Roboto) ;
+    font-family: map-get($letras, textFont) ;
     background-image: map-get($gradiantes, gradiantePrima );
 }

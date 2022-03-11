@@ -86,7 +86,7 @@
 
     /*-------------------------- REDES -----------------------*/
 
-    .sectionIndex{
+/*     .sectionIndex{
         height: 5%;
         width: 100%;
         background-color: rgba(92, 44, 136, 0.897);
@@ -101,7 +101,29 @@
     .sectionPaginas{
         list-style: none;
         width: auto;
+    } */
+
+    .sectionIndex{
+        height: 5%;
+        background-color: rgba(92, 44, 136, 0.897);
+        position: relative; 
+        bottom: 0px; 
     }
+    .ul.sectionPaginas{
+        position: relative;
+    }
+    .sectionPaginas{
+        list-style: none;
+        width: 15%;
+        margin: auto;
+        padding: 0.1%;
+    }
+    
+    .sectionPaginas li{
+        display: inline-block;
+        margin: 1%;
+    }
+
     /* ----------------------- EVENTOS --------------------------*/
 
     .mainEventos{
@@ -114,6 +136,7 @@
     
     .sectionEventos{
         background-color: rgba(171, 122, 216, 0.822);
+        font-family: map-get($letras, textFont );
         margin-bottom: 100px;
         margin-left: 175px;
         padding: 0.1%;
@@ -123,14 +146,14 @@
     .textEventos{
         color: white;
         text-shadow: 2px 2px 4px #000000;
-        font-family: 'Oswald', sans-serif;
+        font-family: map-get($letras, textFont );
         font-style: normal;
         font-size: 150%;
         text-align: center;
         line-height: 15px;
     }
     
-    h6{
+    h3{
         color: rgb(255, 255, 255);
         background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
         text-shadow: 2px 2px 4px #000000;
@@ -183,16 +206,6 @@
         ;
     }
     
-    .divTituloInfo{
-        grid-area: TituloInfo;
-        color: rgb(255, 255, 255);
-        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
-        font-family: 'Oswald', sans-serif;
-        font-size: 300%;
-        text-align: center;
-        grid-column-start: 1;
-        grid-row-start: 1;
-    }
     
     .imgInfo{
         grid-area: imgInfo;
@@ -224,15 +237,12 @@
     
     .textoInfo{
         background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
-        color: rgb(180, 178, 32);
-        font-family: 'Oswald', sans-serif;
+        color: rgb(255, 255, 255);
+        font-family: "Roboto";
         font-size: 200%;
         text-align: justify;
         margin: 20px 0 20px 0; 
         width: 100%;
-/*         display: flex;
-        flex-direction: column;
-        justify-content: space-between; */
         line-height: 30px;
     }
 }
@@ -466,8 +476,8 @@
     
     .textoInfo{
         background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
-        color: rgb(180, 178, 32);
-        font-family: 'Oswald', sans-serif;
+        color: rgb(255, 255, 255);
+        font-family: "Roboto";
         font-size: 200%;
         text-align: justify;
         margin: 20px 0 20px 0; 
