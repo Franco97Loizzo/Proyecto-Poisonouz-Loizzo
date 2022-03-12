@@ -18,10 +18,9 @@ header{
 h2{
     background-image: map-get($gradiantes, gradiantePrima);
     font-family: map-get($letras, titulos );
-    @include desingText (300%, white, center, 15px);
+    @include desingText (150%, white, center, 15px);
 }
 
-/* --- aun tengo problemas con los Anchor ---*/
 a{
     font-family: map-get($letras, anchor);
     text-decoration: none;
@@ -67,57 +66,68 @@ nav{
 
 
 .gridMainPadre{
-    @include gridPadre (1fr 1fr 1fr, 1fr 0.5fr 1fr);
-    grid-template-areas: "flexGaleria , flexNoticias"
-    "flexPaypal"
-    "flexDivAdicional";
-    gap: 3% 0;
-    
+    @include flexBox (column, wrap, space-around);
+    position: relative;
+    align-items: center;
+    width: 1200px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
 }
 
+h1{
+    background-image: map-get($gradiantes, gradiantePrima);
+    font-family: map-get($letras, titulos );
+    @include desingText (120%, white, center, 15px);
+    position: relative;
+}
+
+
 .flexGaleria{
-    grid-column: 1/3;
-    grid-row-start: 1;
-    @include flexBox (row, wrap, space-between);
-    @include anchoAlto (75%, 100%);
-    align-items:flex-start ;
-    object-fit: cover;
-    margin-top: 2%;
-    margin-left: 3%;
+    @include anchoAlto (100%, 100%);
+    object-fit: fill;
+    margin: 1%;
 }
 
 .flexNoticias{
-    grid-column: 3/5;
-    grid-row-start: 1;
     @include flexBox (column, wrap, space-between);
-    width: 100%;
-    margin-top: 15%;
+    width: 75%;
+    height: 35%;
     background-color: map-get($colores, bgprimario );
+    margin: 1%;
 }
 .textNoticias{
     font-family: map-get($letras, textFont);
     color: map-get($colores, textColor);
-    @include desingText (100%, white, start, 15px);
+    @include desingText (120%, white, start, 15px);
+    padding: 0;
+    margin: 1%;
 }
 .flexPaypal{
-    grid-row-start:2 ;
-    grid-column:1/5;
+    width: 70%;
     @include flexBox (row, wrap, space-evenly);
     align-items: center;
     background-color: map-get($colores, bgprimario );
-}
-
-.flexDivAdicional{
-    grid-row-start: 3;
+    margin: 1%;
 }
 
 .fotoTocando{
+    @include anchoAlto(100%,100%);
     object-fit: cover;
 }
 
-.videoYoutube{
-    margin: 0 auto;
+.flexDivAdicional{
+    @include flexBox (row, wrap, center);
+    @include anchoAlto (100%,100%);
+    margin: 1%;
 } 
+
+.videoYoutube{
+    object-fit: fill;
+    @include anchoAlto (100%,100%);
+}
 
 html{
     scroll-behavior: smooth;

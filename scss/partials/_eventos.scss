@@ -9,13 +9,14 @@
     background-image: map-get($gradiantes, gradiantePrima);
     @include desingText (100%, white, center, 25px);
     font-family: map-get($letras, textFont );
-    margin-right: 750px;
+/*     margin-right: 750px; */
     margin-bottom: 100px;
     border: 150px black;
 }
 
 .tablaEventos{
     box-shadow: 4px 4px 8px #000000;
+    margin: 0 auto;
 }
 
 .textEventos{

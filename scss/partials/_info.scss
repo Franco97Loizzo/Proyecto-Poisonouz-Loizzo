@@ -17,7 +17,7 @@
     @include gridHijo (2,1);
     background-image:map-get($gradiantes, gradiantePrima ) ;
     font-family: map-get($letras, textFont );
-    @include desingText (150%, rgb(255, 255, 255), justify, 30px);
+    @include desingText (120%, rgb(255, 255, 255), justify, 30px);
     @include flexBox (column, wrap, space-between);
     margin: 10%;
     margin-right: 15%;

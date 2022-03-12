@@ -25,7 +25,7 @@
 
     /* ------------------------- CUERPO INDEX ----------------- */
 
-    .gridMainPadre{
+/*     .gridMainPadre{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -34,7 +34,7 @@
         "flexPaypal"
         "flexDivAdicional";
         gap: 3% 1%;
-        
+        margin: 0 auto;
     }
 
     .flexGaleria{
@@ -83,7 +83,7 @@
         height: 100%;
         margin-left: 10px;
     } 
-
+ */
     /*-------------------------- REDES -----------------------*/
 
 /*     .sectionIndex{
@@ -124,44 +124,32 @@
         margin: 1%;
     }
 
-    /* ----------------------- EVENTOS --------------------------*/
+/*--------------------------- EVENTOS ---------------------*/
 
-    .mainEventos{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
-    
-    .sectionEventos{
-        background-color: rgba(171, 122, 216, 0.822);
-        font-family: map-get($letras, textFont );
-        margin-bottom: 100px;
-        margin-left: 175px;
-        padding: 0.1%;
-        box-shadow: 4px 4px 8px #000000;
-    }
-    
-    .textEventos{
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
-        font-family: map-get($letras, textFont );
-        font-style: normal;
-        font-size: 150%;
-        text-align: center;
-        line-height: 15px;
-    }
-    
-    h3{
-        color: rgb(255, 255, 255);
-        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
-        text-shadow: 2px 2px 4px #000000;
-        font-family: 'Oswald', sans-serif;
-        font-size: 200%;
-        text-align: center;
-    }
+.mainEventos{
+    @include flexBox (column, wrap, space-around);
+    margin-top: 50px;
+}
 
+.sectionEventos{
+    background-image: map-get($gradiantes, gradiantePrima);
+    @include desingText (120%, white, center, 25px);
+    font-family: map-get($letras, textFont );
+    margin: 5%;
+    border: 150px black;
+}
+
+.tablaEventos{
+    box-shadow: 4px 4px 8px #000000;
+/*     margin: 0; */
+}
+
+.textEventos{
+    font-family: map-get($letras, textFont );
+    @include desingText (120%, rgb(243, 243, 243), center, 15px);
+    text-shadow: 2px 2px 4px #000000;
+    padding: 1%;
+}
     /* ----------------------- MERCH --------------------------*/
 
     .fieldsetMerch {
@@ -196,29 +184,21 @@
     /* ----------------------- INFORMACION --------------------------*/
 
     .mainInfo{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-            
-            "TituloInfo" "imgInfo" "textoInfo"
-            
-        ;
+    @include flexBox (column, wrap, flex-start)
     }
     
     
     .imgInfo{
-        grid-area: imgInfo;
-        grid-column-start: 1;
-        grid-row-start: 2;
         width: 100%;
         height: 100%;
-        margin-top: 0.5%;
         object-fit: fill ;
+        margin-top: -30%;
+        margin-bottom: 3%;
     }
 
     .fotoTocandoInfo{
         width: 100%;
+        height: 100%;
         margin: 0 auto;
     }
     .fotoTocandoInfo:hover{
@@ -230,16 +210,10 @@
     }
     
     .textoInfo{
-        grid-area: textoInfo;
-        grid-column-start: 1;
-        grid-row-start: 3;
-    }
-    
-    .textoInfo{
         background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
         color: rgb(255, 255, 255);
         font-family: "Roboto";
-        font-size: 200%;
+        font-size: 100%;
         text-align: justify;
         margin: 20px 0 20px 0; 
         width: 100%;
@@ -247,7 +221,7 @@
     }
 }
 
-@media only screen and (max-width: 999px){
+@media only screen and (min-width: 600px) and (max-width: 1023px){
     /* ------------------------ Header Nav ------------------- */
 
     header{
@@ -274,70 +248,6 @@
 
     /* ------------------------- CUERPO INDEX ----------------- */
 
-    .gridMainPadre{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "flexGaleria"
-        "flexNoticias"
-        "flexPaypal"
-        "flexDivAdicional"
-        "sectionIndex";
-        gap: 0.5% 1%;
-        
-    }
-
-    .flexGaleria{
-        grid-row: 1;
-        grid-column: 1;
-        width: 90%;
-        object-fit: fill;
-        margin-top: 2%;
-        margin-left: 3%;
-    }
-    
-    .flexNoticias{
-        grid-row-start: 2;
-        grid-column-start: 1;
-        width: 80%;
-        height: 25%;
-        margin-left: 10%;
-        margin-top: 0;
-        color: rgb(210, 199, 212);
-        background-color: rgba(46, 60, 61, 0.884);
-    }
-
-    .flexPaypal{
-        grid-row-start:3 ;
-        grid-column-start: 1;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: 15%;
-        background-color: rgba(49, 60, 61, 0.74);
-    }
-    
-    .flexDivAdicional{
-        grid-row-start:4;
-        width: 90%;
-        margin-left: 3%;
-        background-color: #000000;
-    }
-    
-    .fotoTocando{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .videoYoutube{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    } 
-
     /*-------------------------- REDES -----------------------*/
 
     .sectionIndex{
@@ -363,40 +273,33 @@
 
     /* ----------------------- EVENTOS --------------------------*/
 
-    .mainEventos{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
-    
-    .sectionEventos{
-        background-color: rgba(171, 122, 216, 0.822);
-        margin-bottom: 100px;
-        margin-left: 175px;
-        padding: 0.1%;
-        box-shadow: 4px 4px 8px #000000;
-    }
-    
-    .textEventos{
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
-        font-family: 'Oswald', sans-serif;
-        font-style: normal;
-        font-size: 150%;
-        text-align: center;
-        line-height: 15px;
-    }
-    
-    h6{
-        color: rgb(255, 255, 255);
-        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
-        text-shadow: 2px 2px 4px #000000;
-        font-family: 'Oswald', sans-serif;
-        font-size: 200%;
-        text-align: center;
-    }
+/*--------------------------- EVENTOS ---------------------*/
+
+.mainEventos{
+    @include flexBox (row, wrap, space-around);
+    margin-top: 50px;
+}
+
+.sectionEventos{
+    background-image: map-get($gradiantes, gradiantePrima);
+    @include desingText (100%, white, center, 25px);
+    font-family: map-get($letras, textFont );
+/*     margin-right: 750px; */
+/*     margin-bottom: 100px; */
+    border: 150px black;
+}
+
+.tablaEventos{
+    box-shadow: 4px 4px 8px #000000;
+    margin: 0 auto;
+}
+
+.textEventos{
+    font-family: map-get($letras, textFont );
+    @include desingText (120%, rgb(243, 243, 243), center, 15px);
+    text-shadow: 2px 2px 4px #000000;
+    padding: 1%;
+}
 
     /* ----------------------- MERCH --------------------------*/
 
@@ -431,57 +334,39 @@
     /* ----------------------- INFORMACION --------------------------*/
 
     .mainInfo{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 80px 1fr 1fr;
-        grid-template-areas: 
-            
-            "TituloInfo" "imgInfo" "textoInfo"
-            
-        ;
-    }
+        @include flexBox (column, wrap, flex-start)
+        }
+        
+        
+        .imgInfo{
+            width: 100%;
+            height: 100%;
+            object-fit: fill ;
+            margin-top: -10%;
+            margin-bottom: 3%;
+        }
     
-    .divTituloInfo{
-        grid-area: TituloInfo;
-        color: rgb(255, 255, 255);
-        background: linear-gradient(rgba(92, 44, 136, 0.897), rgba(137, 43, 226, 0) );
-        font-family: 'Oswald', sans-serif;
-        font-size: 300%;
-        text-align: center;
-        grid-column-start: 1;
-        grid-row-start: 1;
-    }
-    
-    .imgInfo{
-        grid-area: imgInfo;
-        grid-column-start: 1;
-        grid-row-start: 2;
-        width: 100%;
-        height: 100%;
-        margin-top: 0.5%;
-        /* margin-left: 15%; */
-        object-fit: fill ;
-    }
-    .fotoTocandoInfo{
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    .textoInfo{
-        grid-area: textoInfo;
-        grid-column-start: 1;
-        grid-row-start: 3;
-    }
-    
-    .textoInfo{
-        background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
-        color: rgb(255, 255, 255);
-        font-family: "Roboto";
-        font-size: 200%;
-        text-align: justify;
-        margin: 20px 0 20px 0; 
-        width: 100%;
-        line-height: 30px;
-    }
+        .fotoTocandoInfo{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .fotoTocandoInfo:hover{
+            filter:invert(15%);
+            width: 400px;
+            height: 600px;
+            z-index: 5;
+        
+        }
+        
+        .textoInfo{
+            background-image: linear-gradient(rgb(43, 9, 73), rgba(209, 164, 252, 0.329));
+            color: rgb(255, 255, 255);
+            font-family: "Roboto";
+            font-size: 100%;
+            text-align: justify;
+            margin: 20px 0 20px 0; 
+            width: 100%;
+            line-height: 30px;
+        }
 }
