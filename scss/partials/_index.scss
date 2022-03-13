@@ -11,7 +11,8 @@ header{
     position: sticky;
     top: 0;
     @include flexBox (row, wrap, space-around);
-    @include anchoAlto (100%, 100%);
+    @include anchoAlto (100%, auto);
+    padding: 16px;
     z-index: 2;
 }
 
@@ -40,8 +41,11 @@ a:focus {
 .headerBanner{
     @include flexBox (row, wrap, flex-start);
     @include anchoAlto (20%, auto);
-    /* object-fit: cover; */
     position: nth($position, 1);
+}
+
+.headerBanner:hover{
+    filter:opacity(75%);
 }
 
 nav{
@@ -136,15 +140,15 @@ html{
 /* --------------------- redes ------------------*/
 
 .sectionIndex{
-    height: 5%;
     background-color: rgba(92, 44, 136, 0.897);
     position: relative; 
     bottom: 0px; 
 }
 
 .sectionPaginas{
+    @include flexBox (row, wrap, center);
     list-style: none;
-    width: 15%;
+    width: 100%;
     margin: auto;
     padding: 0.1%;
 }

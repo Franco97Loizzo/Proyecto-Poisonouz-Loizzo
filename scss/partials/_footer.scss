@@ -1,10 +1,14 @@
 .textoCopyright{
     font-family:map-get($letras, titulos);
-    @include desingText (150%, white, start, 15px);
-    background-color: map-get($colores, secundario);
+    @include desingText (100%, white, start, 15px);
     @include flexBox (row, wrap, center);
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .logoCopyright{
-    margin-left: 45%;
+    @include flexBox(row,wrap,center);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 16px;
+    padding-left: 16px;
 }
